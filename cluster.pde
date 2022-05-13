@@ -26,8 +26,7 @@ void setup(){
       clusters[n] = new Cluster((gridW * x), (gridH * y));
       n++;
     }
-  }
-  
+  } 
 }
 
 void draw(){
@@ -35,8 +34,7 @@ void draw(){
   for(int i = 0; i < n; i++){
     clusters[i].display();  
   }  
-  noLoop();
-  
+  noLoop(); 
 }
 
 
@@ -60,7 +58,6 @@ class Cluster{
     
     endpoints[0] = new PVector(random(border, (width / gridX) - border), random((height / gridY) / 2, (height / gridY) - border));
     endpoints[1] = new PVector(random(border, (width / gridX) - border), random(border, (height / gridY) / 2 - border));
-
   }
   
   void connectedLines(){
@@ -76,7 +73,6 @@ class Cluster{
     //float by2 = generateY();
 
     //lineDivide(ax1, ay1, ax2, ay2, bx1, by1, bx1, by1);
-    
     
     lineDivide(controlpoints[0].x, controlpoints[0].y, controlpoints[1].x, controlpoints[1].y, controlpoints[2].x, controlpoints[2].y, controlpoints[3].x, endpoints[3].y);
   }
